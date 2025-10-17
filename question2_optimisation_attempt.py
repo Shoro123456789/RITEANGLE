@@ -27,6 +27,7 @@ def permutations(word: str,smallest: int, largest: int):
         if contender>largest:
             largest=contender
             large_word=''.join(i)
+    return smallest, small_word, largest, large_word
 
 
 word = "ritangle"
@@ -41,7 +42,7 @@ smallest=paths("ritangle")
 small_word=""
 largest=paths("ritangle")
 large_word=""
-permutations("ritangle",smallest,largest)
+smallest, small_word, largest, large_word = permutations("ritangle",smallest,largest)
 #for i in combos:
 #    contender=paths(i)
 #    if int(contender)<smallest:
