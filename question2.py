@@ -28,7 +28,7 @@ def paths(sample):
         largest_path_word += l(sample[i],sample[i+1])[1]
 #    print(smallest_path_word)
 #    print(largest_path_word)
-    return [smallest_path_word]
+    return smallest_path_word
 
 word = "ritangle"
 permutation= itertools.permutations(word)
@@ -38,17 +38,17 @@ for val in permutation:
 #print(combos)
 #print(len(combos))
 paths("ritangle")
-smallest=paths("ritangle")[0]
+smallest=paths("ritangle")
 small_word=""
-largest=paths("ritangle")[0]
+largest=paths("ritangle")
 large_word=""
 for i in combos:
     contender=paths(i)
-    if int(contender[0])<smallest:
-        smallest=paths(i)[0]
+    if int(contender)<smallest:
+        smallest=contender
         small_word=i
-    if contender[0]>largest:
-        largest=contender[0]
+    if contender>largest:
+        largest=contender
         large_word=i
         print(i)
 print("smallest: "+small_word+",  "+str(smallest))
