@@ -1,5 +1,7 @@
 import string
 import itertools
+import time
+start=time.time()
 letters=list(string.ascii_lowercase)
 print(letters)
 def l(letter1, letter2):
@@ -50,7 +52,9 @@ for i in combos:
     if contender>largest:
         largest=contender
         large_word=i
-        print(i)
+#        print(i)
+end=time.time()
+print("Time taken: "+str(end-start)+" seconds")
 print("smallest: "+small_word+",  "+str(smallest))
 print("largest: "+large_word+",  "+str(largest))
 print("result:  "+str(smallest*largest))
