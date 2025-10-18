@@ -10,13 +10,16 @@ print(letters)
 
 def l(letter1, letter2):
     return abs(letters.index(letter2)-letters.index(letter1))
-
 def paths(sample):
     smallest_path_word=0
     for i in range(0,len(sample)-1):
         smallest_path_word += l(sample[i],sample[i+1])
     return smallest_path_word
-def permutations(word: str,smallest: int, largest: int):
+def permutations(word: str):
+    smallest=paths(word)
+    largest=paths(word)
+    small_word=""
+    large_word=""
     for i in itertools.permutations(word):
         contender = paths(''.join(i))
         if int(contender)<smallest:
@@ -27,17 +30,7 @@ def permutations(word: str,smallest: int, largest: int):
             large_word=''.join(i)
     return smallest, small_word, largest, large_word
 
-
-word = "ritangle"
-permutation= itertools.permutations(word)
-combos = []
-for val in permutation:
-    combos.append(str(''.join(val)))
-smallest=paths("ritangle")
-small_word=""
-largest=paths("ritangle")
-large_word=""
-smallest, small_word, largest, large_word = permutations("ritangle",smallest,largest)
+smallest, small_word, largest, large_word = permutations("ritangle")
 end=time.time()
 print("Time taken: "+str(end-start)+" seconds")
 print("smallest: "+small_word+",  "+str(smallest))
