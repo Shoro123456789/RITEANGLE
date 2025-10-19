@@ -21,5 +21,5 @@ The path length of INTEGRAL is 55 steps (and every step is clockwise!)
 
 Consider the path length for each of the 8! arrangements of the letters R-I-T-A-N-G-L-E.
 
-If the shortest path length is x steps and the longest path length is y steps, what is?
+If the shortest path length is x steps and the longest path length is y steps, what is x*y?
 ![Alt text](https://meiassets.blob.core.windows.net/ritangle-uploads/uploads/cc32e020f2f68c503c936347dd382304.png)
