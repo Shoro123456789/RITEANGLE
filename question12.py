@@ -18,5 +18,6 @@ for HH in range(0,100):
             #    print(str(HH)+":"+str(MM)+":"+str(SS)+"     count:"+str(counter))
             if len(np.unique(sample))==2:
                 counter+=1
-                print(sample+"     count:"+str(counter))
+                print(sample)
+                print("count:"+str(counter))
 print(counter)
